@@ -1,0 +1,8 @@
+{
+  "heap": [],
+  "handlers": {
+    "ReverseProxyHandler": {
+      "type": "ReverseProxyHandler"
+    }
+  }
+}
