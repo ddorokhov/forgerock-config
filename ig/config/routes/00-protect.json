@@ -1,25 +1,12 @@
 {
   "name": "protect-all",
-  "baseURI": "http://home.whitedaos.dns-dynamic.net",
+  "baseURI": "https://home.whitedaos.dns-dynamic.net",
   "condition": "${true}",
 
   "handler": {
     "type": "Chain",
     "config": {
-      "filters": [
-        {
-          "name": "basicAuth",
-          "type": "BasicAuthFilter",
-          "config": {
-            "realm": "Protected",
-            "users": [
-              {
-                "username": "admin",
-                "password": "admin123!"
-              }
-            ]
-          }
-        }
+      "filters": [  
       ],
       "handler": {
         "type": "ReverseProxyHandler",
