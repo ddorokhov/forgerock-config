@@ -1,0 +1,21 @@
+{
+    "connectors": [
+        {
+            "port": 8080,
+            "vertx": {
+                "initialSettings": {
+                    "maxHeaderListSize": 128000
+                },
+                "maxHeaderSize": 128000,
+                "maxWebSocketFrameSize": 128000,
+                "maxWebSocketMessageSize": 256000,
+                "maxInitialLineLength": 128000,
+                "idleTimeout": 4000,
+                "logActiviy": true
+            }
+        }
+    ],
+    "vertx": {
+        "logActiviy": true    
+    }
+}
