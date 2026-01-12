@@ -1,0 +1,8 @@
+{
+  "name": "helloworld",
+  "baseURI": "http://hello:5678",
+  "condition": "${request.uri.path == '/helloworld' || request.uri.path.startsWith('/helloworld/')}",
+  "handler": {
+    "type": "ReverseProxyHandler"
+  }
+}

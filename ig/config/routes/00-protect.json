@@ -1,21 +1,32 @@
 {
   "name": "protect-all",
+  "baseURI": "http://home.whitedaos.dns-dynamic.net",
   "condition": "${true}",
+
   "handler": {
     "type": "Chain",
-    "handler": {
-      "type": "ReverseProxyHandler",
-      "target": "http://forgerock-am:8080"
-    },
-    "filters": [
-      {
-        "type": "BasicAuthFilter",
-        "users": {
-          "admin": {
-            "password": "$2a$14$wgyVm5JHUvmJ27r7E8IjmOC2TOaR1V7psDqGB..c1CQoCTsRzOKY2"
+    "config": {
+      "filters": [
+        {
+          "name": "basicAuth",
+          "type": "BasicAuthFilter",
+          "config": {
+            "realm": "Protected",
+            "users": [
+              {
+                "username": "admin",
+                "password": "admin123!"
+              }
+            ]
           }
         }
+      ],
+      "handler": {
+        "type": "ReverseProxyHandler",
+        "config": {
+          "target": "http://infra.whitedaos.dns-dynamic.net"
+        }
       }
-    ]
+    }
   }
 }
