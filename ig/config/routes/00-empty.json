@@ -1,0 +1,16 @@
+{
+  "name": "empty",
+  "condition": "${true}",
+  "handler": {
+    "type": "StaticResponseHandler",
+    "config": {
+      "status": 404,
+      "headers": {
+        "Content-Type": [
+          "text/plain"
+        ]
+      },
+      "entity": "IG up, no routes enabled"
+    }
+  }
+}
